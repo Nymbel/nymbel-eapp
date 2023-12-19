@@ -7,6 +7,7 @@ import { env } from "./env.mjs"
  */
 const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
   reactStrictMode: true,
+  output: 'standalone',
   experimental: { instrumentationHook: true },
   rewrites() {
     return [
@@ -17,5 +18,6 @@ const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
     ]
   },
 })
+
 
 export default config

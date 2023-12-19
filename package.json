@@ -1,9 +1,10 @@
 {
-  "name": "next-enterprise",
-  "version": "0.0.0",
+  "name": "nymbel-eapp",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "cross-env FORCE_COLOR=1 next dev",
+    "docker": "docker build -t psutka/nymbel-eapp .",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
