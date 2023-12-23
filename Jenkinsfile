@@ -18,8 +18,7 @@ pipeline {
         }
         stage('Build Docker Image') { 
             steps {
-                sh 'apt install docker'
-                sh 'npm run docker'
+                def customImage = docker.build("psutka/nymbel-eapp:latest")
             }
         }
 
