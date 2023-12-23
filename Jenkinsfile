@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker Image') { 
             steps {
-                sh 'sudo apt install docker'
+                sh 'apt install docker'
                 sh 'npm run docker'
             }
         }
