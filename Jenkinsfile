@@ -6,12 +6,21 @@ pipeline {
         }
     }
     stages {
-        stage('Build') { 
+        stage('Install') { 
             steps {
                 sh 'npm install' 
+            }
+        }
+        stage('Build') { 
+            steps {
                 sh 'npm run build'
+            }
+        }
+        stage('Build Docker Image') { 
+            steps {
                 sh 'npm run docker'
             }
         }
+
     }
 }
