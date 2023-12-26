@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  nymbel-eapp:
+    image: psutka/nymbel-eapp
+    restart: always
+    ports:
+      - 3000:3000
