@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env FORCE_COLOR=1 next dev",
-    "dockerk8": "docker build -t psutka/nymbel-eapp --platform linux/amd64  .",
-    "docker": "docker build -t psutka/nymbel-eapp  .",
-    "dockerpush": "docker push psutka/nymbel-eapp:latest",
+    "docker": "docker buildx build --push --platform=linux/amd64 -t psutka/nymbel-eapp:latest .",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
