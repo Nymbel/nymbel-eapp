@@ -11,14 +11,10 @@ pipeline {
                 sh 'yarn install' 
             }
         }
-        stage('Build') { 
-            steps {
-                sh 'npm run build'
-            }
-        }
         stage('Build Docker Image') { 
             steps {
-                def customImage = docker.build("psutka/nymbel-eapp:latest")
+                sh 'yarn docker'
+                sh 'yarn pushdocker'
             }
         }
 
